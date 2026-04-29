@@ -1,0 +1,539 @@
+* {
+  box-sizing: border-box;
+}
+
+body {
+  margin: 0;
+  font-family: Arial, Helvetica, sans-serif;
+  background: #f4f4f4;
+}
+
+.app {
+  min-height: 100vh;
+  background: #eeeeee;
+  color: #111;
+}
+
+.topbar {
+  height: 82px;
+  background: #0072ad;
+  color: white;
+  display: flex;
+  align-items: center;
+  gap: 22px;
+  padding: 0 28px;
+}
+
+button {
+  cursor: pointer;
+  border: none;
+  transition: 0.15s ease;
+}
+
+button:hover {
+  transform: scale(1.03);
+  filter: brightness(0.96);
+}
+
+.icon-btn,
+.search-btn,
+.bookmark-btn,
+.profile-btn {
+  background: transparent;
+  color: white;
+  font-size: 48px;
+}
+
+.profile-btn {
+  border: 2px solid white;
+  border-radius: 50%;
+  font-size: 26px;
+  width: 50px;
+  height: 50px;
+}
+
+.bookmark-btn {
+  font-size: 44px;
+}
+
+.logo {
+  margin: 0 auto;
+  background: transparent;
+  color: white;
+  font-size: 40px;
+  font-weight: bold;
+  display: flex;
+  align-items: center;
+  gap: 10px;
+}
+
+.ud-box {
+  background: white;
+  color: #0072ad;
+  padding: 4px 8px;
+  font-size: 24px;
+}
+
+.accessibility {
+  background: #0065a7;
+  color: white;
+  font-size: 28px;
+  font-weight: bold;
+  padding: 14px;
+}
+
+.panel {
+  background: white;
+  margin: 14px auto;
+  padding: 18px;
+  border-radius: 18px;
+  max-width: 700px;
+  box-shadow: 0 4px 14px #0002;
+}
+
+.panel button {
+  display: block;
+  width: 100%;
+  margin: 8px 0;
+  padding: 12px;
+  border-radius: 12px;
+  background: #dff4ff;
+  color: #111;
+  font-weight: bold;
+}
+
+.menu-panel {
+  max-width: 340px;
+  margin: 12px 0 12px 24px;
+}
+
+.menu-panel button {
+  text-align: left;
+  background: #0072ad;
+  color: white;
+  font-size: 18px;
+}
+
+.search-input {
+  width: 100%;
+  padding: 14px;
+  border: 2px solid #0072ad;
+  border-radius: 12px;
+  font-size: 18px;
+  background: white;
+  color: #111;
+}
+
+.access-panel label {
+  display: block;
+  margin: 12px 0;
+  font-size: 20px;
+}
+
+.access-panel input {
+  margin-right: 10px;
+  transform: scale(1.2);
+}
+
+main {
+  padding: 24px;
+  max-width: 1100px;
+  margin: auto;
+}
+
+h1 {
+  text-align: center;
+  font-size: 34px;
+  font-weight: 400;
+  margin-top: 8px;
+  color: #111;
+}
+
+h2,
+h3,
+p,
+strong,
+b,
+td,
+th,
+label {
+  color: #111;
+}
+
+h2 {
+  font-size: 24px;
+}
+
+.home {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 28px;
+  padding-top: 20px;
+}
+
+.big-nav {
+  background: #0072ad;
+  color: white;
+  border-radius: 40px;
+  min-width: 490px;
+  padding: 18px 26px;
+  font-size: 30px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.big-nav span {
+  background: white;
+  color: #0072ad;
+  border-radius: 6px;
+  padding: 8px;
+}
+
+.big-nav strong {
+  color: white;
+}
+
+.term-grid,
+.action-row,
+.grid-two {
+  display: grid;
+  gap: 32px;
+}
+
+.term-grid {
+  grid-template-columns: repeat(3, 1fr);
+}
+
+.action-row {
+  grid-template-columns: repeat(5, 1fr);
+}
+
+.grid-two {
+  grid-template-columns: repeat(2, 1fr);
+}
+
+.term-card,
+.action-card,
+.info-card,
+.table-card,
+.placeholder {
+  background: white;
+  color: #111;
+  border-radius: 34px;
+  padding: 28px;
+  box-shadow: 0 2px 6px #0001;
+}
+
+.term-card {
+  position: relative;
+  min-height: 140px;
+  font-size: 21px;
+}
+
+.term-card.selected {
+  background: #dff4ff;
+}
+
+.circle-icon,
+.info-header span,
+.action-card span {
+  background: #0072ad;
+  color: white;
+  border-radius: 50%;
+  width: 62px;
+  height: 62px;
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 32px;
+}
+
+.check {
+  position: absolute;
+  right: 22px;
+  top: 18px;
+  color: #0072ad;
+  font-size: 28px;
+}
+
+.action-card {
+  min-height: 140px;
+  font-size: 16px;
+}
+
+.action-card strong,
+.action-card b {
+  display: block;
+  margin-top: 14px;
+  color: #111;
+}
+
+.info-header {
+  display: flex;
+  align-items: center;
+  gap: 16px;
+}
+
+.info-card p {
+  font-size: 20px;
+  margin-left: 55px;
+}
+
+.info-card button,
+.placeholder button,
+.blue {
+  background: #0072ad;
+  color: white;
+  border-radius: 12px;
+  padding: 12px 24px;
+  margin: 8px;
+  font-weight: bold;
+  font-size: 15px;
+}
+
+.link {
+  color: #0072ad;
+}
+
+.wide-dropdown {
+  display: block;
+  margin: 48px auto;
+  background: white;
+  color: #111;
+  border-radius: 34px;
+  padding: 22px 34px;
+  font-size: 24px;
+  font-weight: bold;
+}
+
+.stats {
+  display: flex;
+  justify-content: space-between;
+}
+
+.stats p {
+  margin: 0;
+  text-align: center;
+}
+
+.stats strong {
+  color: #0072ad;
+  font-size: 24px;
+}
+
+.good {
+  color: #00b853 !important;
+}
+
+.tabs {
+  display: flex;
+  gap: 32px;
+  margin-bottom: 14px;
+}
+
+.tabs button {
+  background: transparent;
+  color: #111;
+  font-weight: bold;
+  font-size: 16px;
+}
+
+.tabs .active {
+  color: #0072ad;
+  border-bottom: 4px solid #0072ad;
+}
+
+table {
+  width: 100%;
+  border-collapse: collapse;
+  background: white;
+}
+
+th,
+td {
+  border: 1px solid #ccc;
+  padding: 12px;
+  text-align: left;
+}
+
+th {
+  background: #efefef;
+  text-transform: uppercase;
+}
+
+.semester-summary {
+  background: #dff4ff;
+  display: flex;
+  justify-content: space-around;
+  padding: 18px;
+  color: #005cad;
+  font-size: 20px;
+}
+
+.semester-summary strong {
+  color: #005cad;
+}
+
+.placeholder {
+  text-align: center;
+}
+
+/* Larger text accessibility mode */
+
+.large-text {
+  font-size: 120%;
+}
+
+.large-text button,
+.large-text input,
+.large-text h1,
+.large-text h2,
+.large-text h3,
+.large-text p,
+.large-text td,
+.large-text th,
+.large-text strong,
+.large-text b,
+.large-text label {
+  font-size: 120% !important;
+}
+
+.large-text .topbar {
+  height: 100px;
+}
+
+.large-text .logo {
+  font-size: 48px !important;
+}
+
+.large-text .ud-box {
+  font-size: 30px !important;
+}
+
+.large-text .big-nav {
+  font-size: 36px !important;
+}
+
+.large-text .action-card,
+.large-text .term-card,
+.large-text .info-card {
+  min-height: fit-content;
+}
+
+/* Zoom accessibility mode */
+
+.zoom-mode main,
+.zoom-mode .panel {
+  transform: scale(1.15);
+  transform-origin: top center;
+}
+
+.zoom-mode main {
+  padding-top: 60px;
+}
+
+.zoom-mode .topbar {
+  height: 96px;
+}
+
+.zoom-mode .big-nav,
+.zoom-mode .term-card,
+.zoom-mode .action-card,
+.zoom-mode .info-card,
+.zoom-mode .table-card,
+.zoom-mode .placeholder {
+  box-shadow: 0 6px 18px #0003;
+}
+
+/* High contrast accessibility mode */
+
+.high-contrast {
+  background: black;
+  color: white;
+}
+
+.high-contrast main,
+.high-contrast .panel,
+.high-contrast .info-card,
+.high-contrast .term-card,
+.high-contrast .action-card,
+.high-contrast .table-card,
+.high-contrast .placeholder,
+.high-contrast .wide-dropdown {
+  background: #111;
+  color: white;
+  border: 2px solid white;
+}
+
+.high-contrast h1,
+.high-contrast h2,
+.high-contrast h3,
+.high-contrast p,
+.high-contrast strong,
+.high-contrast b,
+.high-contrast label,
+.high-contrast td,
+.high-contrast th {
+  color: white;
+}
+
+.high-contrast table,
+.high-contrast th,
+.high-contrast td {
+  background: #111;
+  color: white;
+  border-color: white;
+}
+
+.high-contrast .panel button,
+.high-contrast .info-card button,
+.high-contrast .placeholder button,
+.high-contrast .wide-dropdown {
+  background: white;
+  color: black;
+}
+
+.high-contrast .big-nav,
+.high-contrast .menu-panel button {
+  background: white;
+  color: black;
+}
+
+.high-contrast .big-nav strong {
+  color: black;
+}
+
+/* Responsive layout */
+
+@media (max-width: 900px) {
+  .term-grid,
+  .action-row,
+  .grid-two {
+    grid-template-columns: 1fr;
+  }
+
+  .big-nav {
+    min-width: 90%;
+    font-size: 22px;
+  }
+
+  .topbar {
+    gap: 10px;
+    padding: 0 12px;
+  }
+
+  .logo {
+    font-size: 28px;
+  }
+
+  .accessibility {
+    font-size: 18px;
+  }
+
+  .zoom-mode main,
+  .zoom-mode .panel {
+    transform: none;
+  }
+}
